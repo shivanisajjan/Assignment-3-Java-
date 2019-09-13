@@ -19,7 +19,7 @@ public class DataMungerTest {
 	private static CsvQueryProcessor reader;
 
 	@BeforeClass
-	public static void init() throws FileNotFoundException {
+	public static void init() throws IOException {
 		reader = new CsvQueryProcessor("data/ipl.csv");
 	}
 
@@ -102,6 +102,7 @@ public class DataMungerTest {
 				result);
 		display("notNullDataTypesTestCase", result.toString());
 	}
+
 
 	private void display(String testCaseName, String result) {
 		System.out.println(testCaseName);
